@@ -1,0 +1,11 @@
+<app-title
+  title="signals"
+  description="A signal is a wrapper around a value that notifies interested consumers when that value changes. Signals can contain any value, from simple primitives to complex data structures."
+  link="https://angular.dev/guide/signals"
+></app-title>
+
+<p>Haz hecho clic {{ count }} @if(count === 1){ vez }@else{veces}</p>
+<button (click)="onClick()">click me</button>
+<br />
+<input type="text" [value]="name" (change)="changeHandler($event)" />
+<p>{{ name }}</p>

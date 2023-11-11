@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ShowElementsComponent } from './components/show-elements/show-elements.component';
 import { PropertyBindingComponent } from './components/property-binding/property-binding.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
+import { ReactiveSignalComponent } from './components/reactive-signal/reactive-signal.component';
 
 @Component({
   selector: 'app-labs',
@@ -12,6 +13,7 @@ import { EventBindingComponent } from './components/event-binding/event-binding.
     ShowElementsComponent,
     PropertyBindingComponent,
     EventBindingComponent,
+    ReactiveSignalComponent
   ],
   templateUrl: './labs.component.html',
   styleUrl: './labs.component.scss',
