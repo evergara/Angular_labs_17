@@ -1,0 +1,55 @@
+<app-title
+  title="control flow"
+  description="control flow blocks that let you conditionally show, hide, and repeat elements."
+  link="https://angular.dev/guide/templates/control-flow">
+</app-title>
+
+<ul>
+  <p>new Built-in control flow </p>
+  <li>if block conditionals else if, else`</li>
+  <li>switch block case, default </li>
+  <li>empty</li>
+  <li>for  - track $index and other contextual variables $count, $first, $last, $even, $odd</li>
+</ul>
+
+<ul>
+  <p>old Built-in control flow </p>
+  <li>ngIf block conditionals else`</li>
+  <li>ngSwitch block NgSwitchCase, NgSwitchDefault </li>
+  <li>NgFor</li>
+  <li>for  - trackBy index and other contextual variables count, first, last, even, odd</li>
+</ul>
+
+
+<p>total element: {{tasks.length}}</p>
+<h3>Show element with for</h3>
+<ul>
+  @for (task of tasks; track $index) {
+    <li>
+      {{$index  + 1}} - {{ task }}
+      <span style="color: brown;">
+        @if($index === 0){
+          very important
+        }@else if($index === 1){
+          important
+        }@else if($index === 2){
+          less important
+        } @else {
+          pending
+        }
+      </span>
+    </li>
+  }
+</ul>
+
+<h3>Show traditional element whit ngFor</h3>
+<ul>
+  <li *ngFor="let task of tasks; index as i">
+    {{i + 1}} - {{ task }}
+  </li>
+</ul>
+
+<br>
+<br>
+<br>
+<input type="text" name="task" id="task" (change)="setTask($event)" />
