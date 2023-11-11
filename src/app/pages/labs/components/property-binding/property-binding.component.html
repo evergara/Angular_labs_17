@@ -1,0 +1,22 @@
+<h3>{{ title }}</h3>
+<p>This allows us to modify the attribute of a tag in HTML.</p>
+
+<h2>{{ interpolation }}</h2>
+
+<img src="{{ img }}" alt="" />
+<input type="number" value="{{name}}" />
+<button disabled="{{ disabled }}">Click me</button>
+
+<h2>{{ binding }}</h2>
+
+<img [src]="img" alt="" />
+<input type="number" [value]="age" />
+<button [disabled]="disabled">Click me</button>
+
+<h2>{{object}}</h2>
+
+<p>{{ person | json }}</p>
+
+<img [src]="person.avatar" alt="" />
+<input type="number" [value]="person.age" />
+<button [disabled]="person.active">Click me</button>

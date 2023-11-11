@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ShowElementsComponent } from './components/show-elements/show-elements.component';
+import { PropertyBindingComponent } from './components/property-binding/property-binding.component';
 
 @Component({
   selector: 'app-labs',
   standalone: true,
-  imports: [CommonModule, ShowElementsComponent],
+  imports: [CommonModule, ShowElementsComponent, PropertyBindingComponent],
   templateUrl: './labs.component.html',
   styleUrl: './labs.component.scss'
 })
