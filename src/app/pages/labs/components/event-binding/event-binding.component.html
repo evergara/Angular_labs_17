@@ -1,0 +1,18 @@
+<h3>{{ title }}</h3>
+<h5>{{ description }}</h5>
+
+<button (click)="clickHandler()">click me</button>
+<button (dblclick)="dbClickHandler($event)">double me</button>
+
+<p>(change)</p>
+<input type="number" [value]="person.age" (change)="changeHandler($event)" />
+<p>(change)</p>
+<input type="text" [value]="person.name" (change)="changeHandler($event)" />
+<p> {{changeInput}}</p>
+<br />
+<p>(keydown)</p>
+<input type="text" [value]="person.name" (keydown)="keydownHandler($event)" />
+<p>(keydown shift )</p>
+<input type="text" [value]="person.name" (keydown.shift.t)="clickHandler()" />
+<p> {{keydownInput}}</p>
+<br />
